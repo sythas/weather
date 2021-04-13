@@ -1,9 +1,15 @@
+import { useState, useEffect} from 'react'
 import format from 'date-fns/format'
 import Stack from './Stack'
 import Text from './Text'
 
 function Clock () {
-  const now = new Date()
+  const [now, setNow] = useState(new Date())
+
+  useEffect(() => {
+    const interval = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (<Stack flex center>
     <div>
