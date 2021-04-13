@@ -26,7 +26,7 @@ function App() {
       <Divider />
       <Today forecast={forecast.periods[0]} />
       <Divider />
-      <Week forecasts={forecast.periods.slice(1)} />
+      <Week forecasts={forecast.periods.slice(1, 6)} />
     </Stack>
   );
 }
