@@ -13,7 +13,7 @@ function Clock () {
 
   return (<Stack flex center>
     <div>
-    <Text fontSize="8rem">{format(now, "hh:mm a")}</Text>
+    <Text fontSize="8rem">{format(now, "hh:mm:ss a")}</Text>
    <Text>{format(now, "MM/dd/yyyy")}</Text>
    </div>
   </Stack>)
