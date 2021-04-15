@@ -21,9 +21,11 @@ const useForecast = (position) => {
 
         setForecast({
           place: `${city}, ${state}`,
-          periods: forecast.properties.periods.filter(
-            (period, i) => i === 0 || period.isDaytime
-          ),
+          current: forecast.properties.periods[0],
+          periods: forecast.properties.periods
+            .slice(1)
+            .filter((period) => period.isDaytime)
+            .slice(0, 5),
         });
       } catch (err) {
         setError(err);

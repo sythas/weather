@@ -25,9 +25,9 @@ function App() {
       <ChangeTheme />
       <Place place={forecast.place} />
       <Divider />
-      <Today forecast={forecast.periods[0]} />
+      <Today forecast={forecast.current} />
       <Divider />
-      <Week forecasts={forecast.periods.slice(1, 6)} />
+      <Week forecasts={forecast.periods} />
     </Stack>
   );
 }
