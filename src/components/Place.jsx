@@ -1,5 +1,7 @@
-import Text from './Text'
+import Text from "./Text";
 
-const Place = ({ place }) => <Text textAlign="center">{place}</Text> 
+const Place = ({ place }) => (
+  <Text style={{ textAlign: "center" }}>{place}</Text>
+);
 
-export default Place
+export default Place;
