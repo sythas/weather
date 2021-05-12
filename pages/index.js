@@ -29,9 +29,6 @@ function App() {
       <Today forecast={forecast.current} />
       <Divider />
       <Week forecasts={forecast.periods} />
-      <Link href="/about">
-        <a>About</a>
-      </Link>
     </Stack>
   );
 }
