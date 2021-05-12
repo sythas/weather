@@ -10,6 +10,7 @@ import Spinner from "../components/Spinner";
 import Alert from "../components/Alert";
 import useLocation from "../hooks/useLocation";
 import useForecast from "../hooks/useForecast";
+import Link from "next/link";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -28,6 +29,9 @@ function App() {
       <Today forecast={forecast.current} />
       <Divider />
       <Week forecasts={forecast.periods} />
+      <Link href="/about">
+        <a>About</a>
+      </Link>
     </Stack>
   );
 }
